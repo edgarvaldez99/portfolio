@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { translations } from "../i18n/translations";
+---
+
+<Layout title="Terms & Conditions — Edgar Valdez">
+  <Header />
+  <main class="legal">
+    <div class="container">
+      <h1>Terms & Conditions</h1>
+      <p class="legal-updated">Last updated: February 2026</p>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>
+        By accessing and using this website (valdezdev.work), you accept and
+        agree to be bound by the terms and provisions of this agreement.
+      </p>
+
+      <h2>2. Use of the Website</h2>
+      <p>
+        This website is a personal portfolio showcasing the professional work
+        and projects of Edgar Valdez. The content is provided for informational
+        purposes only.
+      </p>
+
+      <h2>3. Intellectual Property</h2>
+      <p>
+        All content on this website, including text, graphics, logos, and code
+        examples, is the property of Edgar Valdez unless otherwise stated.
+        Third-party trademarks and logos remain the property of their respective
+        owners.
+      </p>
+
+      <h2>4. Third-Party Services</h2>
+      <p>
+        This website and associated projects may integrate with third-party
+        services and APIs, including but not limited to:
+      </p>
+      <ul>
+        <li>Social media platforms (LinkedIn, GitHub)</li>
+        <li>Cloud service providers (AWS, Cloudflare)</li>
+        <li>Analytics and monitoring services</li>
+      </ul>
+      <p>
+        Use of these services is subject to their respective terms of service
+        and privacy policies.
+      </p>
+
+      <h2>5. Disclaimer</h2>
+      <p>
+        This website is provided "as is" without any warranties, expressed or
+        implied. Edgar Valdez does not warrant that the website will be
+        uninterrupted or error-free.
+      </p>
+
+      <h2>6. Limitation of Liability</h2>
+      <p>
+        Edgar Valdez shall not be liable for any direct, indirect, incidental,
+        consequential, or special damages arising out of or in connection with
+        the use of this website.
+      </p>
+
+      <h2>7. External Links</h2>
+      <p>
+        This website may contain links to external websites. Edgar Valdez is
+        not responsible for the content or privacy practices of these external
+        sites.
+      </p>
+
+      <h2>8. Changes to Terms</h2>
+      <p>
+        These terms may be updated from time to time. Continued use of the
+        website after changes constitutes acceptance of the new terms.
+      </p>
+
+      <h2>9. Contact</h2>
+      <p>
+        For questions about these terms, please contact:
+        <a href="mailto:contact@valdezdev.work">contact@valdezdev.work</a>
+      </p>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<script is:inline define:vars={{ translations }}>
+  window.__translations = translations;
+  if (window.__applyLang && window.__currentLang) {
+    window.__applyLang(window.__currentLang);
+  }
+</script>

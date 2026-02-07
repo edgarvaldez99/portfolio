@@ -1,0 +1,57 @@
+---
+const categories = [
+  {
+    key: "skills.frontend",
+    label: "Frontend",
+    tags: ["React", "Next.js", "Angular", "Vue.js", "Astro", "TypeScript", "JavaScript", "HTML", "CSS"],
+  },
+  {
+    key: "skills.backend",
+    label: "Backend",
+    tags: ["Node.js", "NestJS", "Python", "FastAPI", "PHP", "Laravel", "Java", "Spring Boot", "C#", ".NET"],
+  },
+  {
+    key: "skills.mobile",
+    label: "Mobile",
+    tags: ["React Native", "Flutter", "Dart", "Expo"],
+  },
+  {
+    key: "skills.devops",
+    label: "DevOps",
+    tags: ["Docker", "GitHub Actions", "CI/CD", "Nginx", "Linux", "Terraform"],
+  },
+  {
+    key: "skills.databases",
+    label: "Databases",
+    tags: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "DynamoDB", "Firebase"],
+  },
+  {
+    key: "skills.cloud",
+    label: "Cloud & Services",
+    tags: ["AWS", "Cloudflare", "Vercel", "DigitalOcean", "REST APIs", "GraphQL"],
+  },
+  {
+    key: "skills.ai",
+    label: "AI & Tools",
+    tags: ["Claude AI", "OpenAI API", "LangChain", "Git", "Jira", "Figma"],
+  },
+];
+---
+
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="section-heading" data-i18n="skills.heading">Skills</h2>
+    <div class="skills-grid">
+      {categories.map((cat) => (
+        <div class="skill-category">
+          <h3 data-i18n={cat.key}>{cat.label}</h3>
+          <div class="skill-tags">
+            {cat.tags.map((tag) => (
+              <span class="skill-tag">{tag}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

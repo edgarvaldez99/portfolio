@@ -1,0 +1,111 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { translations } from "../i18n/translations";
+---
+
+<Layout title="Privacy Policy — Edgar Valdez">
+  <Header />
+  <main class="legal">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p class="legal-updated">Last updated: February 2026</p>
+
+      <h2>1. Introduction</h2>
+      <p>
+        This privacy policy explains how Edgar Valdez ("I", "me", "my")
+        handles information in connection with the website valdezdev.work and
+        associated projects.
+      </p>
+
+      <h2>2. Information Collection</h2>
+      <p>
+        This website is a static portfolio site. I do not directly collect,
+        store, or process personal data through this website. There are no
+        user accounts, forms, cookies, or tracking scripts on this site.
+      </p>
+
+      <h2>3. Third-Party Services</h2>
+      <p>This website is hosted on Cloudflare Pages, which may collect:</p>
+      <ul>
+        <li>
+          Basic web analytics (page views, country-level location data)
+        </li>
+        <li>Standard server logs (IP addresses, browser type, timestamps)</li>
+      </ul>
+      <p>
+        For more information, see
+        <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">
+          Cloudflare's Privacy Policy</a
+        >.
+      </p>
+
+      <h2>4. Social Media & API Integrations</h2>
+      <p>
+        Projects associated with this portfolio may integrate with third-party
+        APIs and social media platforms. When using such projects:
+      </p>
+      <ul>
+        <li>
+          Data is processed according to the respective platform's privacy
+          policy
+        </li>
+        <li>
+          No social media data is stored on this website or its servers
+        </li>
+        <li>
+          API integrations use only the minimum permissions necessary for
+          functionality
+        </li>
+      </ul>
+
+      <h2>5. Data Sharing</h2>
+      <p>
+        I do not sell, trade, or otherwise transfer any personal information
+        to third parties. Any data processed through project integrations
+        remains subject to the respective platform's data handling practices.
+      </p>
+
+      <h2>6. Data Security</h2>
+      <p>
+        This website uses HTTPS encryption via Cloudflare SSL/TLS. While I
+        strive to protect any information transmitted to this site, no method
+        of transmission over the Internet is 100% secure.
+      </p>
+
+      <h2>7. Children's Privacy</h2>
+      <p>
+        This website is not directed at children under the age of 13. I do
+        not knowingly collect any information from children.
+      </p>
+
+      <h2>8. Your Rights</h2>
+      <p>
+        Since this website does not collect personal data, there is generally
+        no personal data to access, modify, or delete. If you have concerns
+        about data processed through any of my projects, please contact me.
+      </p>
+
+      <h2>9. Changes to This Policy</h2>
+      <p>
+        This privacy policy may be updated from time to time. Changes will be
+        reflected on this page with an updated revision date.
+      </p>
+
+      <h2>10. Contact</h2>
+      <p>
+        For privacy-related questions or concerns, please contact:
+        <a href="mailto:contact@valdezdev.work">contact@valdezdev.work</a>
+      </p>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<script is:inline define:vars={{ translations }}>
+  window.__translations = translations;
+  if (window.__applyLang && window.__currentLang) {
+    window.__applyLang(window.__currentLang);
+  }
+</script>

@@ -1,0 +1,43 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+import LanguageToggle from "./LanguageToggle.astro";
+---
+
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="header-logo">EV</a>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+
+    <nav class="header-nav" id="header-nav">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#skills" data-i18n="nav.skills">Skills</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#education" data-i18n="nav.education">Education</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="header-controls">
+      <ThemeToggle />
+      <LanguageToggle />
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  (function () {
+    var toggle = document.getElementById("menu-toggle");
+    var nav = document.getElementById("header-nav");
+
+    toggle.addEventListener("click", function () {
+      nav.classList.toggle("open");
+    });
+
+    // Close menu when clicking a link
+    nav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        nav.classList.remove("open");
+      });
+    });
+  })();
+</script>

@@ -1,0 +1,57 @@
+---
+const jobs = [
+  {
+    roleKey: "experience.hitmusic.role",
+    roleDefault: "Software Developer",
+    companyKey: "experience.hitmusic.company",
+    companyDefault: "HitMusic21",
+    periodKey: "experience.hitmusic.period",
+    periodDefault: "2025 — Present",
+    descKey: "experience.hitmusic.desc",
+    descDefault:
+      "Leading development of a music streaming platform. Implementing serverless backend with AWS Lambda and DynamoDB, alongside a React-based frontend.",
+  },
+  {
+    roleKey: "experience.cds.role",
+    roleDefault: "Full-Stack Developer & Tech Lead",
+    companyKey: "experience.cds.company",
+    companyDefault: "CDS",
+    periodKey: "experience.cds.period",
+    periodDefault: "2017 — 2025",
+    descKey: "experience.cds.desc",
+    descDefault:
+      "Led cross-functional teams in delivering enterprise solutions for healthcare, telecommunications, and fintech clients. Key projects included a telemedicine platform (Node.js, React, PostgreSQL), mobile apps (React Native, Flutter), and microservices architectures on AWS.",
+  },
+  {
+    roleKey: "experience.cast.role",
+    roleDefault: "Software Developer",
+    companyKey: "experience.cast.company",
+    companyDefault: "Cast SRL",
+    periodKey: "experience.cast.period",
+    periodDefault: "2014 — 2017",
+    descKey: "experience.cast.desc",
+    descDefault:
+      "Developed internal management systems and client-facing web applications using PHP, Laravel, jQuery, and MySQL. Maintained legacy systems and contributed to database optimization efforts.",
+  },
+];
+---
+
+<section id="experience" class="section">
+  <div class="container">
+    <h2 class="section-heading" data-i18n="experience.heading">Experience</h2>
+    <div class="timeline">
+      {jobs.map((job) => (
+        <div class="timeline-item">
+          <div class="timeline-header">
+            <div>
+              <div class="timeline-role" data-i18n={job.roleKey}>{job.roleDefault}</div>
+              <div class="timeline-company" data-i18n={job.companyKey}>{job.companyDefault}</div>
+            </div>
+            <span class="timeline-period" data-i18n={job.periodKey}>{job.periodDefault}</span>
+          </div>
+          <p class="timeline-desc" data-i18n={job.descKey}>{job.descDefault}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

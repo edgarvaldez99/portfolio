@@ -1,0 +1,28 @@
+---
+---
+
+<button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+  <span id="theme-icon">&#9790;</span>
+</button>
+
+<script is:inline>
+  (function () {
+    var btn = document.getElementById("theme-toggle");
+    var icon = document.getElementById("theme-icon");
+
+    function updateIcon() {
+      var theme = document.documentElement.getAttribute("data-theme");
+      icon.textContent = theme === "light" ? "\u2600" : "\u263E";
+    }
+
+    updateIcon();
+
+    btn.addEventListener("click", function () {
+      var current = document.documentElement.getAttribute("data-theme");
+      var next = current === "light" ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      updateIcon();
+    });
+  })();
+</script>
