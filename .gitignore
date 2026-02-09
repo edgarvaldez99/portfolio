@@ -23,6 +23,8 @@ pnpm-debug.log*
 # Windows
 Thumbs.db
 desktop.ini
+bash.exe.stackdump
+nul
 
 # jetbrains setting folder
 .idea/
@@ -33,3 +35,4 @@ desktop.ini
 # editor
 *.swp
 *.swo
+

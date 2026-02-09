@@ -8,9 +8,10 @@ export const translations = {
     "nav.contact": "Contact",
 
     // Hero
+    "hero.greeting": "Hello, I'm",
     "hero.title": "Full-Stack Developer",
     "hero.description":
-      "Passionate software engineer with 10+ years of experience building web, mobile, and cloud applications. Focused on delivering clean, scalable solutions.",
+      "Passionate software developer with 10+ years of experience building web, mobile, and cloud applications. Focused on delivering clean, scalable solutions.",
     "hero.contact": "Get in Touch",
 
     // About
@@ -70,9 +71,10 @@ export const translations = {
     "nav.contact": "Contacto",
 
     // Hero
+    "hero.greeting": "Hola, soy",
     "hero.title": "Desarrollador Full-Stack",
     "hero.description":
-      "Ingeniero de software apasionado con más de 10 años de experiencia construyendo aplicaciones web, móviles y en la nube. Enfocado en soluciones limpias y escalables.",
+      "Programador apasionado con más de 10 años de experiencia construyendo aplicaciones web, móviles y en la nube. Enfocado en soluciones limpias y escalables.",
     "hero.contact": "Contactar",
 
     // About
